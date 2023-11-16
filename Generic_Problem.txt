@@ -1,0 +1,11 @@
+How do I add two numbers in C++?
+How to print hello world in C++?
+What is the difference between cout and printf in C++? 
+How to take input from user in C++?
+How to create a class in C++?
+What is a struct in C++?   
+How to use vectors in C++?
+How to use maps in C++?
+What is the use of headers in C++?
+What is namespace in C++?
+How to declare variables in C++?  

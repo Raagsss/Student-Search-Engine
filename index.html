@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        /* Apply styles to the body */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333; /* Dark text color */
+            background-color: #f2f2f2; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    
+        /* Apply styles to the heading (h1) */
+        h1 {
+            font-size: 2em; /* Adjust heading font size */
+            color: #333; /* Dark text color */
+        }
+    
+        /* Apply styles to the form */
+        form {
+            margin-top: 20px; /* Adjust the margin to separate the form from the heading */
+        }
+    
+        /* Apply styles to the input field */
+        input[type="text"] {
+            width: 500px; /* Increase input width */
+            height: 40px; /* Adjust input height */
+            padding: 10px; /* Adjust the padding for better appearance */
+        }
+    
+        /* Apply styles to the button */
+        button {
+            padding: 10px 20px; /* Adjust button padding */
+            background-color: #4285f4; /* Google blue */
+            color: white; /* White text color */
+            border: none;
+            cursor: pointer;
+        }
+    
+        /* Apply styles to the result div */
+        #result {
+            margin-top: 20px; /* Adjust margin to separate the result from the form */
+            text-align: left; /* Align text to the left */
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to Search Engine</h1>
+    <form id="question-form">
+        <label for="user_input">Enter your question:</label>
+        <input type="text" name="user_input" id="user_input" required>
+        <button type="button" id="search-button">Search</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById("question-form");
+        const resultDiv = document.getElementById("result");
+        const searchButton = document.getElementById("search-button");
+
+        searchButton.addEventListener("click", () => {
+            const userInput = form.user_input.value;
+            fetch("/", {
+                method: "POST",
+                body: new URLSearchParams({ user_input: userInput }),
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    resultDiv.textContent = data.result;
+                });
+        });
+    </script>
+</body>
+</html>

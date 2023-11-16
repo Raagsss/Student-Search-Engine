@@ -1,0 +1,11 @@
+https://www.geeksforgeeks.org/cpp-add-numbers/
+https://www.geeksforgeeks.org/writing-first-c-program-hello-world-example/
+https://stackoverflow.com/questions/2872543/printf-vs-cout-in-c
+https://www.geeksforgeeks.org/input-in-cpp/
+https://www.w3schools.com/cpp/cpp_classes.asp
+https://www.geeksforgeeks.org/structures-in-cpp/
+https://www.geeksforgeeks.org/vector-in-cpp-stl/
+https://www.geeksforgeeks.org/map-associative-containers-the-c-standard-template-library-stl/
+https://www.geeksforgeeks.org/header-files-in-c-cpp-and-its-uses/
+https://www.programiz.com/cpp-programming/std-namespace
+https://www.geeksforgeeks.org/cpp-variables/
